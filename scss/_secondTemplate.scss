@@ -1,0 +1,43 @@
+.second {
+    background-color: hsl(0, 0%, 90%);
+    color: hsl(60, 10%, 19%);
+
+    #top {
+        .flex {
+            .right {
+                .themes {
+                    .input {
+                        background-color: hsl(0, 5%, 81%);
+                    }
+                }
+            }
+        }
+       
+    }
+
+    #screen {
+        background-color: hsl(0, 0%, 93%);
+        color: hsl(60, 10%, 19%);
+    }
+
+    #buttons {
+        background-color: hsl(0, 5%, 81%);
+
+        .btn {
+            box-shadow: 2px 3px hsl(35, 11%, 61%);
+            background-color: hsl(45, 7%, 89%);
+        }            
+        .del {
+            box-shadow: 2px 3px hsl(185, 58%, 25%);
+            background-color: hsl(185, 42%, 37%);
+        }
+        .res {
+            box-shadow: 2px 3px hsl(185, 58%, 25%);
+            background-color: hsl(185, 42%, 37%);
+        }
+        .equal {
+            box-shadow: 2px 3px hsl(25, 99%, 27%);
+            background-color: hsl(25, 98%, 40%);
+        }
+    }
+}

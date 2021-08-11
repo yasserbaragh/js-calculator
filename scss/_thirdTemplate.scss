@@ -1,0 +1,52 @@
+.third {
+    background-color: hsl(268, 75%, 9%);
+    color: hsl(52, 100%, 62%);
+
+    #top {
+        .flex {
+            .right {
+                .themes {
+                    .input {
+                        background-color: hsl(268, 71%, 12%);
+
+                        #circle {
+                            background-color: hsl(176, 100%, 44%);
+                        }
+                    }
+                }
+            }
+        }
+       
+    }
+
+    #screen {
+        background-color: hsl(268, 71%, 12%);
+        color: hsl(52, 100%, 62%);
+    }
+
+    #buttons {
+        background-color: hsl(268, 71%, 12%);
+        color: hsl(52, 100%, 62%);
+
+        .btn {
+            box-shadow: 2px 3px hsl(290, 70%, 36%);
+            background-color: hsl(268, 47%, 21%);
+            color: hsl(52, 100%, 62%);
+        }            
+        .del {
+            box-shadow: 2px 3px hsl(285, 91%, 52%);
+            background-color: hsl(281, 89%, 26%);
+            color: white;
+        }
+        .res {
+            box-shadow: 2px 3px hsl(285, 91%, 52%);
+            background-color: hsl(281, 89%, 26%);
+            color: white;
+        }
+        .equal {
+            box-shadow: 2px 3px hsl(177, 92%, 70%);
+            background-color: hsl(176, 100%, 44%);
+            color: hsl(198, 20%, 13%);
+        }
+    }
+}

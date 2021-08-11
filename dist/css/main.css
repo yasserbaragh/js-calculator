@@ -1,0 +1,335 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Spartan', sans-serif;
+}
+
+.second {
+  background-color: #e6e6e6;
+  color: #35352c;
+}
+
+.second #top .flex .right .themes .input {
+  background-color: #d1cccc;
+}
+
+.second #screen {
+  background-color: #ededed;
+  color: #35352c;
+}
+
+.second #buttons {
+  background-color: #d1cccc;
+}
+
+.second #buttons .btn {
+  -webkit-box-shadow: 2px 3px #a69d91;
+          box-shadow: 2px 3px #a69d91;
+  background-color: #e5e4e1;
+}
+
+.second #buttons .del {
+  -webkit-box-shadow: 2px 3px #1b5f65;
+          box-shadow: 2px 3px #1b5f65;
+  background-color: #377f86;
+}
+
+.second #buttons .res {
+  -webkit-box-shadow: 2px 3px #1b5f65;
+          box-shadow: 2px 3px #1b5f65;
+  background-color: #377f86;
+}
+
+.second #buttons .equal {
+  -webkit-box-shadow: 2px 3px #893901;
+          box-shadow: 2px 3px #893901;
+  background-color: #ca5502;
+}
+
+.third {
+  background-color: #160628;
+  color: #ffe53d;
+}
+
+.third #top .flex .right .themes .input {
+  background-color: #1d0934;
+}
+
+.third #top .flex .right .themes .input #circle {
+  background-color: #00e0d1;
+}
+
+.third #screen {
+  background-color: #1d0934;
+  color: #ffe53d;
+}
+
+.third #buttons {
+  background-color: #1d0934;
+  color: #ffe53d;
+}
+
+.third #buttons .btn {
+  -webkit-box-shadow: 2px 3px #871c9c;
+          box-shadow: 2px 3px #871c9c;
+  background-color: #341c4f;
+  color: #ffe53d;
+}
+
+.third #buttons .del {
+  -webkit-box-shadow: 2px 3px #bc15f4;
+          box-shadow: 2px 3px #bc15f4;
+  background-color: #58077d;
+  color: white;
+}
+
+.third #buttons .res {
+  -webkit-box-shadow: 2px 3px #bc15f4;
+          box-shadow: 2px 3px #bc15f4;
+  background-color: #58077d;
+  color: white;
+}
+
+.third #buttons .equal {
+  -webkit-box-shadow: 2px 3px #6cf9f2;
+          box-shadow: 2px 3px #6cf9f2;
+  background-color: #00e0d1;
+  color: #1b2428;
+}
+
+main {
+  height: 100vh;
+  background-color: #3a4764;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Spartan', sans-serif;
+  color: white;
+  padding: 50px 0;
+}
+
+main #top {
+  width: 50%;
+}
+
+main #top .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 18px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #top .flex h1 {
+  font-size: 16px;
+  text-transform: lowercase;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+main #top .flex .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+main #top .flex .right span {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  text-transform: uppercase;
+  font-size: 11px;
+  color: hsl 20, 10, 80%;
+}
+
+main #top .flex .right .themes ul {
+  list-style-type: none;
+  margin-bottom: 0;
+  font-size: 11px;
+}
+
+main #top .flex .right .themes ul li {
+  display: inline;
+  padding: 0 5px;
+}
+
+main #top .flex .right .themes .input {
+  background-color: white;
+  height: 20px;
+  width: 70%;
+  float: right;
+  text-align: center;
+  position: relative;
+  background-color: #232c43;
+  border-radius: 50px;
+}
+
+main #top .flex .right .themes .input button {
+  display: inline;
+  height: 100%;
+  width: 27%;
+  background-color: transparent;
+  border: none;
+}
+
+main #top .flex .right .themes .input button:hover {
+  cursor: pointer;
+}
+
+main #top .flex .right .themes .input #circle {
+  background-color: #d03f2f;
+  width: 24%;
+  border-radius: 50%;
+  height: 77%;
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+main #top .flex .right .themes .input #circle.one {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+main #top .flex .right .themes .input #circle.two {
+  -webkit-transform: translateX(120%);
+          transform: translateX(120%);
+}
+
+main #top .flex .right .themes .input #circle.three {
+  -webkit-transform: translateX(250%);
+          transform: translateX(250%);
+}
+
+main #screen {
+  background-color: #182034;
+  margin: 20px 0;
+  height: 80px;
+  width: 50%;
+  color: white;
+  text-align: right;
+  border-radius: 7px;
+  padding: 16px 0px;
+  font-size: 35px;
+}
+
+main #buttons {
+  background-color: #232c43;
+  margin: 0px 0;
+  height: 100%;
+  width: 50%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[5];
+      grid-template-rows: repeat(5, 1fr);
+  gap: 10px;
+  padding: 20px;
+  color: #444b5a;
+  border-radius: 7px;
+}
+
+main #buttons .btn {
+  -webkit-box-shadow: 2px 3px #a69d91;
+          box-shadow: 2px 3px #a69d91;
+}
+
+main #buttons .btn:hover {
+  opacity: 0.9;
+}
+
+main #buttons .btn:focus {
+  outline: none;
+}
+
+main #buttons .btn:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+main #buttons .rowA {
+  -ms-grid-row: 1;
+  grid-row: 1;
+  background-color: #eae3dc;
+}
+
+main #buttons .rowB {
+  -ms-grid-row: 2;
+  grid-row: 2;
+  background-color: #eae3dc;
+}
+
+main #buttons .rowC {
+  -ms-grid-row: 3;
+  grid-row: 3;
+  background-color: #eae3dc;
+}
+
+main #buttons .rowD {
+  -ms-grid-row: 4;
+  grid-row: 4;
+  background-color: #eae3dc;
+}
+
+main #buttons .res {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  background-color: #d03f2f;
+  color: white;
+  -webkit-box-shadow: 2px 3px #893901;
+          box-shadow: 2px 3px #893901;
+}
+
+main #buttons .equal {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-column: 3/ 5;
+  background-color: #637097;
+  color: white;
+  -webkit-box-shadow: 2px 3px #1b5f65;
+          box-shadow: 2px 3px #1b5f65;
+}
+
+main #buttons .del {
+  background-color: #637097;
+  color: white;
+  -webkit-box-shadow: 2px 3px #1b5f65;
+          box-shadow: 2px 3px #1b5f65;
+}
+
+@media (max-width: 767px) {
+  main #top {
+    width: 90vw;
+  }
+  main #screen {
+    width: 90vw;
+  }
+  main #buttons {
+    width: 90vw;
+  }
+}
+/*# sourceMappingURL=main.css.map */
