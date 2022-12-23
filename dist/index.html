@@ -35,31 +35,35 @@
                 </div>
             </div>
         </section>
-        <section id="screen">
-           
-        </section>
-        <section id="buttons">
-            <button class="btn dot rowD" >.</button>
-            <button class="btn number rowD">0</button>
-            <button class="btn number rowC">1</button>
-            <button class="btn number rowC">2</button>
-            <button class="btn number rowC">3</button>
-            <button class="btn number rowB">4</button>
-            <button class="btn number rowB">5</button>
-            <button class="btn number rowB">6</button>
-            <button class="btn number rowA">7</button>
-            <button class="btn number rowA">8</button>
-            <button class="btn number rowA">9</button>
-            <button class="btn operator rowB">+</button>
-            <button class="btn operator rowC">-</button>
-            <button class="btn operator rowD">x</button>
-            <button class="btn operator rowD">/</button>
-            <button class="btn rowA del">DEl</button>
-            <button class="btn res">RESET</button>
-            <button class="btn equal">=</button>
-        </section>
+        <div id="app">
+            <section id="screen">
+                <div>{{result}}</div>
+            </section>
+            <section id="buttons">
+                <button class="btn dot rowD" >.</button>
+                <button @click="write(0)" class="btn number rowD">0</button>
+                <button @click="write(1)" class="btn number rowC">1</button>
+                <button @click="write(2)" class="btn number rowC">2</button>
+                <button @click="write(3)" class="btn number rowC">3</button>
+                <button @click="write(4)" class="btn number rowB">4</button>
+                <button @click="write(5)" class="btn number rowB">5</button>
+                <button @click="write(6)" class="btn number rowB">6</button>
+                <button @click="write(7)" class="btn number rowA">7</button>
+                <button @click="write(8)" class="btn number rowA">8</button>
+                <button @click="write(9)" class="btn number rowA">9</button>
+                <button @click="operating('+')" class="btn operator rowB">+</button>
+                <button @click="operating('-')" class="btn operator rowC">-</button>
+                <button @click="operating('*')" class="btn operator rowD">x</button>
+                <button @click="operating('/')" class="btn operator rowD">/</button>
+                <button class="btn rowA del" @click="delet">DEl</button>
+                <button class="btn res" @click="clear">RESET</button>
+                <button class="btn equal" @click="operate">=</button>
+            </section>
+        </div>
     </main>
 
+    
+    <script src="https://unpkg.com/vue@3.1.5"></script>
     <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
