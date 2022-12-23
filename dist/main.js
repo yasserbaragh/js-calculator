@@ -1,122 +1,3 @@
-const buttons = document.querySelectorAll(".number");
-const operators = document.querySelectorAll(".operator");
-let screen = document.getElementById("screen");
-const deleteBtn = document.querySelector(".del");
-let previous = 0;
-const equal = document.querySelector(".equal");
-const reset = document.querySelector(".res");
-const dot = document.querySelector(".dot");
-
-
-
-
-
-
-class calc {
-    constructor(curr, prev) {
-        this.curr = curr
-        this.prev = prev
-    }
-
-    clear() {
-        this.curr = ''
-        this.prev = ''
-    }
-    del() {
-        let list = Array.from(this.curr);
-        list.pop();
-        this.curr = list.join("");
-    }
-
-    writing(num) {
-        this.curr += num
-    }
-
-    writingPoint(point) {
-        let list = Array.from(this.curr)
-        if (list.includes(".")) {
-            return
-        } else {
-            this.curr += point
-        }
-    }
-
-    operating(oper) {
-        if(this.curr === "") return
-        if(this.prev !== "") {
-            this.operation()
-        }
-        this.oper = oper
-        this.prev = this.curr
-        this.curr = ""
-    }
-
-    operation() {
-        let comput
-        if (isNaN(this.prev) || (isNaN(this.curr))) {return} else {
-        switch(this.oper) {
-            case "+" :
-                comput = parseFloat(this.prev) + parseFloat(this.curr)
-                break;
-            case "-" :
-                comput = parseFloat(this.prev) - parseFloat(this.curr)
-                break;
-            case "x" : 
-                comput = parseFloat(this.prev) * parseFloat(this.curr)
-                break;
-            case "/" : 
-                comput = parseFloat(this.prev) / parseFloat(this.curr)
-        } }
-        this.curr = comput;
-        this.oper = undefined;
-        this.prev = ""
-    }
-
-    updateDisplay() {
-        screen.textContent = this.curr
-    }
-}
-
-let calculator = new calc("", "");
-
-buttons.forEach(button => {
-    button.onclick = function() {
-        calculator.writing(button.innerHTML)
-        calculator.updateDisplay();
-    }
-})
-
-dot.onclick = function () {
-    calculator.writingPoint(dot.textContent);
-    calculator.updateDisplay();
-}
-
-operators.forEach(operator => {
-    operator.onclick = function() {
-        calculator.operating(operator.innerHTML);
-        calculator.updateDisplay();
-        
-    }
-})
-
-equal.addEventListener('click', button => {
-    calculator.operation()
-    calculator.updateDisplay()
-    calculator.clear()
-})
-
-reset.onclick = function() {
-    calculator.clear()
-    calculator.updateDisplay();
-}
-
-deleteBtn.onclick = function() {
-    calculator.del();
-    calculator.updateDisplay();
-}
-
-
-// theme change 
 const span = document.getElementById("circle");
 const buttonsaa = document.querySelectorAll(".input button");
 const btnArray = Array.from(buttonsaa);
@@ -136,6 +17,65 @@ btnArray[2].onclick = function () {
     span.className = "three";
     main.className = "third";
 }
+
+// vue js calculator
+const app = Vue.createApp({
+    data() {
+        return {
+            result: "",
+            prev: "",
+            operation: ""
+        }
+    },
+    methods: {
+        clear() {
+            this.result= ""
+        },
+        write(num) {
+            this.result += num
+        },
+        delet() {
+            let array = Array.from(this.result)
+            array.pop()
+            this.result = array.join("")
+        },
+        operating(oper) {
+            if(this.result === "") return
+            if(this.prev !== "") {
+                this.operate()
+            }
+            this.operation = oper
+            this.prev = this.result
+            this.result = ""
+        },
+        operate() {
+            let curr;
+            switch(this.operation) {
+                case "+":
+                    curr = parseFloat(this.prev) + parseFloat(this.result)
+                    break
+                case "-":
+                    curr = parseFloat(this.prev) - parseFloat(this.result)
+                    break
+                case "x":
+                    curr = parseFloat(this.prev) * parseFloat(this.result)
+                    break
+                case "/":
+                    curr = parseFloat(this.prev) / parseFloat(this.result)
+                    break
+            }
+            this.operation = ""
+            this.result = curr
+            this.prev = ""
+        }
+    },
+})
+
+const vm = app.mount("#app")
+
+
+
+
 
 
 
