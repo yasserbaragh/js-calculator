@@ -11,6 +11,7 @@ const dot = document.querySelector(".dot");
 
 
 
+
 class calc {
     constructor(curr, prev) {
         this.curr = curr
@@ -19,6 +20,7 @@ class calc {
 
     clear() {
         this.curr = ''
+        this.prev = ''
     }
     del() {
         let list = Array.from(this.curr);
@@ -40,8 +42,12 @@ class calc {
     }
 
     operating(oper) {
+        if(this.curr === "") return
+        if(this.prev !== "") {
+            this.operation()
+        }
         this.oper = oper
-        this.prev = this.curr;
+        this.prev = this.curr
         this.curr = ""
     }
 
@@ -130,6 +136,10 @@ btnArray[2].onclick = function () {
     span.className = "three";
     main.className = "third";
 }
+
+
+
+
 
 
 
